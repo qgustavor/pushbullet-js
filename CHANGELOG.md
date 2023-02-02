@@ -1,5 +1,12 @@
 ## Changelog
 
+### 4.0.0?
+
+- Ported to Deno. Does versioning still matter for Deno since there is no version in `deno.json`?
+- Removed deprecated function `.sendSMS()`.
+- Made encryption asynchronous to enable WebCrypto usage.
+- Changed code style to Standard because is what I always do when I fork projects.
+
 ### 3.0.0
 
 **Note that this major version release contains backwards incompatible changes.**
