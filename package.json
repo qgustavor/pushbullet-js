@@ -1,6 +1,6 @@
 {
   "name": "@qgustavor/pushbullet-js",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "Fork of pushbullet",
   "main": "lib/pushbullet.js",
   "directories": {
