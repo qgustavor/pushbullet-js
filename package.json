@@ -1,0 +1,34 @@
+{
+  "name": "@qgustavor/pushbullet-js",
+  "version": "1.0.0-beta",
+  "description": "Fork of pushbullet",
+  "main": "lib/pushbullet.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qgustavor/pushbullet-js.git"
+  },
+  "contributors": [
+    "Alex Whitman <alex@alexwhitman.com>",
+    "qgustavor"
+  ],
+  "license": "BSD-2-Clause",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/qgustavor/pushbullet-js/issues"
+  },
+  "homepage": "https://github.com/qgustavor/pushbullet-js#readme",
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "neostandard": "^0.12.2"
+  },
+  "dependencies": {
+    "mime": "^4.1.0"
+  }
+}

@@ -1,13 +1,13 @@
-# PushBullet API
+# PushBullet JS
 
-A Deno module for using the [PushBullet REST API](https://www.pushbullet.com/api).
+A JavaScript module for using the [PushBullet REST API](https://www.pushbullet.com/api). Forked from https://github.com/qgustavor/deno-pushbullet-api/ which was forked from https://github.com/alexwhitman/node-pushbullet-api as the Deno module had fixes from node-pushbullet-api but can't be used on Node. And because Deno can open Node imports, it's better to just migrate to Node.
 
 ## Usage
 
 This module is very simple to use. All you need is your PushBullet API key and you can begin pushing.
 
 ```javascript
-import PushBullet from 'https://github.com/qgustavor/deno-pushbullet-api/raw/master/lib/pushbullet.js'
+import PushBullet from '@qgustavor/pushbullet-js'
 const pusher = new PushBullet('YOUR-API-KEY')
 
 const response = await pusher.devices()
@@ -115,12 +115,13 @@ Push a link to the specified device.
 await pusher.link('u1qSJddxeKwOGuGW', 'GitHub', 'https://github.com/', 'Note body text')
 ```
 
-### PushBullet.file(deviceParams, filePath, message)
+### PushBullet.file(deviceParams, file, message)
 
 Push a file to the specified device.
 
 ```javascript
-await pusher.file('u1qSJddxeKwOGuGW', '/path/to/file', 'Important file!')
+const file = new File([await fs.readFile('/path/to/file')], 'file')
+await pusher.file('u1qSJddxeKwOGuGW', file, 'Important file!')
 ```
 
 ### PushBullet.dismissPush(pushIden)
