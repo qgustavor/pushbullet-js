@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    // Output settings
+    "outDir": "./dist",                    // Output directory for compiled JS
+    "rootDir": "./src",                    // Root directory of source files
+    "sourceMap": true,                     // Generate .map files for debugging
+    "declaration": true,                   // Generate .d.ts type definition files
+    "declarationMap": true,                // Generate sourcemaps for .d.ts files
+    
+    // Module settings
+    "module": "ES2022",                    // Use ES modules (matches your .js imports)
+    "moduleResolution": "node",            // Use Node.js module resolution
+    "target": "ES2022",                    // Target modern JavaScript
+    
+    // Compatibility
+    "esModuleInterop": true,               // Better CommonJS/ES module interop
+    "allowSyntheticDefaultImports": true,  // Allow default imports from modules
+    "resolveJsonModule": true,             // Allow importing JSON files
+    
+    // Type checking
+    "strict": true,                        // Enable all strict type checking
+    "noImplicitAny": true,                 // Error on implied 'any' type
+    "strictNullChecks": true,              // Strict null checking
+    "strictFunctionTypes": true,           // Strict function type checking
+    "strictPropertyInitialization": true,  // Ensure class properties are initialized
+    "noImplicitThis": true,                // Error on 'this' with implied 'any'
+    "alwaysStrict": true,                  // Parse in strict mode
+    
+    // Additional checks
+    "noUnusedLocals": true,                // Report unused local variables
+    "noUnusedParameters": true,            // Report unused parameters
+    "noImplicitReturns": true,             // Report missing returns in functions
+    "noFallthroughCasesInSwitch": true,    // Report fallthrough cases in switch
+    
+    // Advanced options
+    "skipLibCheck": true,                  // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent casing
+    "lib": ["ES2022", "DOM"],              // Include standard library types
+    
+    // Experimental features
+    "experimentalDecorators": true,        // Enable decorators (if needed)
+    "emitDecoratorMetadata": true          // Emit metadata for decorators
+  },
+  "include": [
+    "src/**/*"                             // Include all files in src directory
+  ],
+  "exclude": [
+    "node_modules",                        // Exclude dependencies
+    "dist",                                // Exclude output directory
+    "**/*.spec.ts",                        // Exclude test files (optional)
+    "**/*.test.ts"
+  ]
+}
