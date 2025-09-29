@@ -1,10 +1,11 @@
+export default PushBullet;
 /**
  * PushBullet API abstraction module.
  *
  * @param {String} apiKey PushBullet API key.
  */
-declare function PushBullet(apiKey: string): void;
-declare class PushBullet {
+export function PushBullet(apiKey: string): void;
+export class PushBullet {
     /**
      * PushBullet API abstraction module.
      *
@@ -47,7 +48,7 @@ declare class PushBullet {
      */
     makeRequest(verb: string, endPoint: string, options: any): Promise<any>;
 }
-declare namespace PushBullet {
+export namespace PushBullet {
     let API_BASE: string;
     let CHANNEL_INFO_END_POINT: string;
     let CHANNELS_END_POINT: string;
@@ -60,6 +61,5 @@ declare namespace PushBullet {
     let UPLOAD_END_POINT: string;
     let USERS_END_POINT: string;
 }
-export default PushBullet;
 import Encryption from './internal/encryption.js';
 import Stream from './internal/stream.js';
