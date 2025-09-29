@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Fork of pushbullet",
   "main": "lib/pushbullet.js",
+  "types": "types/pushbullet.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "test": "eslint --fix"
+    "test": "eslint --fix",
+    "types": "tsc lib/pushbullet.js --declaration --allowJs --emitDeclarationOnly --outDir types --target ES2022"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,8 @@
   "homepage": "https://github.com/qgustavor/pushbullet-js#readme",
   "devDependencies": {
     "eslint": "^9.36.0",
-    "neostandard": "^0.12.2"
+    "neostandard": "^0.12.2",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "mime": "^4.1.0"
